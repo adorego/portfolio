@@ -75,7 +75,7 @@ const ProjectsSection = (props:ProjectsSectionProps) =>{
                                         <a className={classes.cardUrl}
                                         target={'_blank'} 
                                         rel={"noreferrer"} 
-                                        href={project.url}
+                                        href={project.gitUrl}
                                         ><FaGithub></FaGithub>Source Code</a>
                                         <a id='urlId' 
                                         target={'_blank'} 
