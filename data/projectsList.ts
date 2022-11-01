@@ -1,4 +1,4 @@
-import {ProjectModel} from '../../Layout/ProjectsSection';
+import {ProjectModel} from '../Layout/ProjectsSection';
 
 export const ProjectsList:Array<ProjectModel> = [
     {
