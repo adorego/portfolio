@@ -66,12 +66,12 @@ const NavBarMenu = () =>{
                     <meta name="description" content={'I am a ReactJS/NextJS Software Engineer'} />
                     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
                     <meta property="og:url" content={'https://portfolio-adorego.vercel.app/'} key="ogurl" />
-                    <meta property="og:image" itemProp="image" content={'https://portfolio-adorego.vercel.ap/images/social_adorego-min.jpeg'} key="ogimage" />
+                    <meta property="og:image" itemProp="image" content={'https://portfolio-adorego.vercel.app/images/social_adorego-min.jpeg'} key="ogimage" />
                     <meta property="og:type" content="website" />
                     <meta property="og:updated_time" content="1440432930" />
                     <meta property="og:site_name" content={'I am a ReactJS/NextJS Software Engineer'} key="ogsitename" />
                     <meta property="og:title" content={'Andrés Do Rego Barros, ReactJS/NextJS Software Engineer'} key="ogtitle" />
-                    <meta property="og:description" content={'I am a ReactJS/NextJS Software Engineer.'} key="ogdesc" />
+                    <meta property="og:description" content={'I am a ReactJS/NextJS Software Engineer.This is my professional Portfolio.'} key="ogdesc" />
         </Head>
         <div className={classes.container}>
             <div className={classes.logoContainer}>
