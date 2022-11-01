@@ -17,7 +17,7 @@ const FirstSection = () =>{
                 additionalStyle={{
                 backgroundColor:"var(--primary-color)",
                 border:"1px solid var(--primary-color)",
-                color:"white", width:"8rem", height:"41px"}} />
+                color:"var(--text-on-primary-color)", width:"8rem", height:"41px"}} />
             </div>
             
             <div className={classes.tagline}>

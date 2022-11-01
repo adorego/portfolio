@@ -26,7 +26,7 @@ export const ProjectsList:Array<ProjectModel> = [
         idProject:'3',
         name:'SmartHousePY',
         image:{url:'/images/smart_house_logo.png', width:'1386', height:'1507'},
-        description:'Smart House is the FrontEnd of a IoT Solution to replace TV remote control in a first phase',
+        description:'Smart House is the FrontEnd of a IoT Solution to replace TV remote controls in a first phase',
         video:'/videos/smart-house.mp4',
         url:'https://smart-house-gold.vercel.app/',
         gitUrl:'https://github.com/adorego/smart-house.git',

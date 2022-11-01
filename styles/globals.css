@@ -24,11 +24,12 @@ a {
   --primary-color-dark:#001D36;
   --primary-color-complement:#825000;
   --primary-color-complement-dark:#362100;
-  --secondary-color: #D1C0A8;
+  --secondary-color: #B54912;
   --secondary-color-complement: #507085;
   --background-color: #F4F2F3;
   --text-color-primary: #2A2A2A;
   --text-on-primary-color:#F4F2F3;
+  --text-on-secondary-color:#F4F2F3;
 }
 
 @media screen and (max-width:600px){
