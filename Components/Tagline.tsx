@@ -41,11 +41,11 @@ const Tagline = () =>{
                 <Button label="Contact Me"
                     animated={false}
                     isAvailable={true}
-                    additionalStyle={{backgroundColor:"var(--secondary-color)", 
+                    additionalStyle={{backgroundColor:"var(--primary-color-complement)", 
                     width:"160px", height:"60px", 
                     border:"2px solid var(--primary-color)",
                     fontWeight:"bold",
-                    margin:"0px 0px 0px 0px", color:"var(--primary-color)"}}>
+                    margin:"0px 0px 0px 0px", color:"var(--text-on-primary-complement)"}}>
 
                 </Button>
             </motion.div>
