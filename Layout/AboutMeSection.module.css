@@ -1,5 +1,6 @@
 .container{
-   
+    width: 100%;
+    /* border:2px solid red; */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -11,14 +12,14 @@
     width: 220px;
     height: 220px;
     max-width: 300px;
-    
+    /* border:2px solid red; */
 }
 .textContent{
     display: block;
     margin: 0 auto;
-    width: 60vw;
     height: auto;
     text-align: justify;
+    /* border:2px solid red; */
 }
 
 .textContent p{
@@ -27,7 +28,7 @@
 }
 
 .textContent h3{
-    margin: 0px 0px 0px 0px;
+    margin: 16px 0px 16px 0px;
 }
 
 .textContent p a{
@@ -39,34 +40,37 @@
 
 @media screen and (max-width:600px) {
     .container{
-        flex-direction: column;
-        justify-content: center;
-        align-items:center;
-        gap: 16px;
-        margin: 64px 8px 0px 8px;
+        margin: 120px 8px 0px 8px;
     }
-    .photoContainer{
-        margin: 48px 0px 0px 0px;
-        border: 2px solid var(--primary-color);
-        padding: 8px;
+    .textContent{
+        display: block;
+        width: 95%;
+        
     }
     
 }
 
-@media screen and (min-width:600px) {
+@media screen and (min-width:600px) and (max-width:800px) {
     .container{
-        flex-direction: column;
-        justify-content: center;
-        align-items:center;
-        gap: 16px;
+        margin: 120px 8px 0px 8px;
     }
-    .photoContainer{
-        margin: 60px 0px 0px 0px;
-        border: 2px solid var(--primary-color);
-        padding: 8px;
+    .textContent{
+        display: block;
+        width: 95%;
+        
     }
 
     
+}
 
-    
+@media screen and (min-width:800px) {
+    .container{
+        margin: 120px 8px 0px 8px;
+    }
+    .textContent{
+        display: block;
+        width: 75%;
+        margin: 0px 16px 0px 16px;
+        
+    }
 }

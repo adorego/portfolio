@@ -26,7 +26,6 @@ export interface ProjectsSectionProps{
     projects:Array<ProjectModel>;
 }
 const ProjectsSection = (props:ProjectsSectionProps) =>{
-    const projectId = useRef<string>(null);
     const appDemoRef = useRef<ReactNode>(null);
     const [showPortal,setShowPortal] = useState<boolean>(false);
     
@@ -34,7 +33,7 @@ const ProjectsSection = (props:ProjectsSectionProps) =>{
         setShowPortal(false);
     }
     const onPlayProjectCardHandler = (projectId:string) =>{
-        console.log('projectId:', projectId);
+        // console.log('projectId:', projectId);
         const project = props.projects.filter((item) => item.idProject === projectId)
         appDemoRef.current = <AppDemo 
         videoToShow={project[0].video}
@@ -52,48 +51,50 @@ const ProjectsSection = (props:ProjectsSectionProps) =>{
                     <Image className={classes.sectionPhoto} src={'/images/projects_image.jpeg'} 
                     alt={'My photo'} priority={true} layout="responsive" width={2400} height={1800}/>
                 </div>
-                <h3 className={classes.projectsTitle}>Projects</h3>
-                <div className={classes.projectsList}>
-                    
-                    {props.projects.map(
-                        (project:ProjectModel, index) =>{
-                            // console.log('project:', project);
-                            return(
-                                <BasicCard 
-                                showPlayOnHover={true}
-                                identificationId={project.idProject}
-                                key={index}
-                                onPlayHandler={onPlayProjectCardHandler}
-                                additionalStyle={{width:"300px",height:"250px", 
-                                position:"relative"}}>
-                                    <div className={classes.cardImageContainer}>
-                                        <Image className={classes.cardImage} src={project.image.url} layout="fill" width={352} height={525} alt="" />
-                                    </div>
-                                    <p className={classes.cardProjectDescription}>{project.description}</p>
-                                    <hr />
-                                    <div className={classes.urlSection}>
-                                        <a className={classes.cardUrl}
-                                        target={'_blank'} 
-                                        rel={"noreferrer"} 
-                                        href={project.gitUrl}
-                                        ><FaGithub></FaGithub>Source Code</a>
-                                        <a id='urlId' 
-                                        target={'_blank'} 
-                                        rel={"noreferrer"} 
-                                        className={classes.cardUrl} 
-                                        href={project.url}><FaGlobe></FaGlobe>Service URL</a>
-                                        
-                                    </div>
-                                    <hr />
-                                    <div className={classes.techListContainer}>
-                                        {project.techStack.map(
-                                            (techLabel, index) => <MiniCardKey key={index} label={techLabel} />
-                                        )}
-                                    </div>
-                                </BasicCard>
-                            )
-                        }
-                    )}
+                <div className={classes.projectsContent}>
+                    <h3 className={classes.projectsTitle}>Projects</h3>
+                    <div className={classes.projectsList}>
+                        
+                        {props.projects.map(
+                            (project:ProjectModel, index) =>{
+                                // console.log('project:', project);
+                                return(
+                                    <BasicCard 
+                                    showPlayOnHover={true}
+                                    identificationId={project.idProject}
+                                    key={index}
+                                    onPlayHandler={onPlayProjectCardHandler}
+                                    additionalStyle={{width:"220px",height:"auto", minWidth:"220px", 
+                                    minHeight:"250px",position:"relative"}}>
+                                        <div className={classes.cardImageContainer}>
+                                            <Image className={classes.cardImage} src={project.image.url} layout="fill" width={352} height={525} alt="" />
+                                        </div>
+                                        <p className={classes.cardProjectDescription}>{project.description}</p>
+                                        <hr />
+                                        <div className={classes.urlSection}>
+                                            <a className={classes.cardUrl}
+                                            target={'_blank'} 
+                                            rel={"noreferrer"} 
+                                            href={project.gitUrl}
+                                            ><FaGithub></FaGithub>Source Code</a>
+                                            <a id='urlId' 
+                                            target={'_blank'} 
+                                            rel={"noreferrer"} 
+                                            className={classes.cardUrl} 
+                                            href={project.url}><FaGlobe></FaGlobe>Service URL</a>
+                                            
+                                        </div>
+                                        <hr />
+                                        <div className={classes.techListContainer}>
+                                            {project.techStack.map(
+                                                (techLabel, index) => <MiniCardKey key={index} label={techLabel} />
+                                            )}
+                                        </div>
+                                    </BasicCard>
+                                )
+                            }
+                        )}
+                    </div>
                 </div>
             </section>
             

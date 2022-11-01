@@ -2,7 +2,7 @@
     width: 100%;
     height: 60px;
     border: 1px solid var(--text-on-secondary-color);
-    background-color: var(--primary-color-light);
+    background-color: var(--secondary-color);
     display: flex;
     flex-direction: row;
     justify-content: flex-end;
@@ -37,7 +37,7 @@
 }
 
 .bars:hover{
-    color: var(--primary-color-complement);
+    color: var(--secondary-color-complement);
 }
 
 
@@ -48,7 +48,7 @@
 }
 
 .menu a:hover{
-    color:white;
+    color: var(--secondary-color-complement);
     cursor: pointer;
 }
 

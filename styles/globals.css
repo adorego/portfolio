@@ -22,9 +22,11 @@ a {
   --primary-color:#004481;
   --primary-color-light:#1578CF;
   --primary-color-dark:#001D36;
-  --primary-color-complement:#813D00;
+  --primary-color-complement:#82120D;
   --primary-color-complement-dark:#362100;
-  --secondary-color: #B54912;
+  /* --secondary-color: #B54912; */
+  /* --secondary-color:#07088F; */
+  --secondary-color:#82120D;
   --secondary-color-complement: #507085;
   --background-color: #F4F2F3;
   --text-color-primary: #2A2A2A;

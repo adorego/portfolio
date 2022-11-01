@@ -25,14 +25,12 @@
 }
 .projectsList{
     width: 100%;
-    /* border: 2px solid red; */
-    margin: auto;
     display: flex;
     flex-direction: row;
     justify-content: flex-start;
     align-items: center;
-    gap: 32px;
-    max-width: 80vw;
+    
+    
 }
 
 .cardTitle{
@@ -85,13 +83,19 @@
     margin: 100px 0px 0px 0px;
     
 } */
-
-@media screen and (max-width:600px) {
+@media screen and (max-width:440px) {
+    .projectsList{
+        flex-direction: column;
+        gap: 16px;
+    }
+}
+@media screen and (min-width:440px) and (max-width:800px) {
     .container{
+        /* border:2px solid red; */
         flex-direction: column;
         justify-content: center;
         align-items:center;
-        gap: 16px;
+        gap: 8px;
         margin: 64px 8px 0px 8px;
     }
     .photoContainer{
@@ -99,23 +103,46 @@
         padding: 8px;
     }
 
+    .projectsContent{
+        width: 100%;
+        margin: 0px 0px 0px 0px;
+        /* border:2px solid red; */
+    }
     .projectsList{
-        flex-direction: column;
+        width: 100vw;
+        margin: 0px 0px 0px 0px;
+        /* border:2px solid red; */
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+        gap:16px
     }
     
 }
 
 
-@media screen and (min-width:600px) {
+@media screen and (min-width:800px) {
     .container{
         flex-direction: column;
         justify-content: center;
         align-items:center;
         gap: 0px;
+        
     }
     .photoContainer{
         margin: 60px 0px 0px 0px;
         padding: 8px;
+    }
+
+    .projectsContent{
+        /* max-width: 75vw; */
+        /* border: 2px solid red; */
+        padding: 0px 0px 0px 0px;
+    }
+
+    .projectsList{
+        justify-content: space-between;
+        gap:32px
     }
 
     
