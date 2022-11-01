@@ -10,7 +10,6 @@ import {motion} from "framer-motion";
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-      <DefaultSeo {...SEO} />
       <Component {...pageProps} />
     </>
     
