@@ -1,0 +1,10 @@
+.sideButtonNavLeft{
+    position: fixed;
+    top: 50vh;
+    left: 50px;
+}
+.sideButtonNavRight{
+    position: fixed;
+    top: 50vh;
+    right: 50px;
+}

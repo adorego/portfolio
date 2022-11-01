@@ -1,0 +1,14 @@
+.containerButtonNav{
+    width: 30px;
+    height: auto;
+
+}
+
+.containerButtonNav:hover{
+    cursor: pointer;
+}
+
+.labelClass{
+    font-size: 12px !important;
+    margin: 8px 0px 0px 0px;
+}

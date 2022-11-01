@@ -1,0 +1,42 @@
+.container{
+    width: 100%;
+    text-align: center;
+    color: #2A2A2A;
+    max-width: 800px;
+    
+}
+
+.container h1{
+    color: var(--primary-color);
+}
+
+.container h6{
+    margin: 0px 0px 0px 0px;
+}
+
+
+@media screen and (max-width:600px){
+    .container{
+        margin: 1rem 8px 1rem 8px;
+    }
+    .container h5{
+        margin: 0px 0px 0px 0px;
+    }
+    .buttonContainer{
+        margin: 32px 0px 32px 0px ;
+    }
+}
+
+@media screen and (min-width:600px){
+    .container{
+        margin: auto;
+    }
+    .container h5{
+        margin: 0px 0px 0px 0px;
+    }
+    .buttonContainer{
+        margin: 32px 0px 32px 0px;
+    }
+}
+
+

@@ -1,0 +1,29 @@
+.button-app{
+  font-family: Montserrat,Lato, Oswald, Roboto, sans-serif;
+  font-weight: 400;
+  line-height: 17px;
+  font-style: normal;
+  letter-spacing: 1.25px;
+  font-size: 18px;
+}
+
+.button-per{
+  border-radius: 8px;
+  border: none;
+  max-width: 420px;
+  min-height:60px;
+  cursor:pointer;
+}
+
+.animated-button{
+    animation-name: buttonAnimation;
+    animation-duration: 2s;
+    animation-direction: alternate;
+    animation-iteration-count: infinite;
+}
+
+@keyframes buttonAnimation {
+  from {font-size: 16px;}
+  to {font-size: 24px;}
+}
+

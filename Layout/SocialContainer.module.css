@@ -1,0 +1,15 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    gap: 24px;
+    width: 48px;
+    height: 192px;
+}
+
+.icon{
+    color: #372D2D;
+    width: 24px;
+    height: 24px;
+
+}

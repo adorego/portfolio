@@ -1,0 +1,9 @@
+.container{
+    border-radius: 8px;
+    width: auto;
+    height: auto;
+    padding: 1px;
+    background-color: var(--primary-color);
+    color: white;
+    margin: 16px;
+}
