@@ -65,7 +65,12 @@ const ProjectsSection = (props:ProjectsSectionProps) =>{
                                     additionalStyle={{width:"220px",height:"auto", minWidth:"220px", 
                                     minHeight:"250px",position:"relative"}}>
                                         <div className={classes.cardImageContainer}>
-                                            <Image className={classes.cardImage} src={project.image.url} layout="fill" width={352} height={525} alt="" />
+                                            <Image
+                                            priority={true} 
+                                            className={classes.cardImage} 
+                                            src={project.image.url} 
+                                            layout="fill" width={352} 
+                                            height={525} alt="" />
                                         </div>
                                         <p className={classes.cardProjectDescription}>{project.description}</p>
                                         <hr />
