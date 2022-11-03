@@ -7,6 +7,7 @@ import Image from 'next/image';
 import KeyWordContainer from '../Components/KeyWordContainer';
 import MiniCardKey from '../Components/MiniCardKey';
 import PageLayout from './PageLayout';
+import PlayButton from '../Components/PlayButton';
 import PortalContainer from './PortalContainer';
 import classes from './ProjectsSection.module.css';
 
@@ -33,7 +34,7 @@ const ProjectsSection = (props:ProjectsSectionProps) =>{
         setShowPortal(false);
     }
     const onPlayProjectCardHandler = (projectId:string) =>{
-        // console.log('projectId:', projectId);
+        console.log('projectId:', projectId);
         const project = props.projects.filter((item) => item.idProject === projectId)
         appDemoRef.current = <AppDemo 
         videoToShow={project[0].video}
@@ -47,10 +48,10 @@ const ProjectsSection = (props:ProjectsSectionProps) =>{
                 {appDemoRef.current}
             </PortalContainer>}
             <section className={classes.container}>
-                <div className={classes.photoContainer}>
+                {/* <div className={classes.photoContainer}>
                     <Image className={classes.sectionPhoto} src={'/images/projects_image.jpeg'} 
                     alt={'My photo'} priority={true} layout="responsive" width={2400} height={1800}/>
-                </div>
+                </div> */}
                 <div className={classes.projectsContent}>
                     <h3 className={classes.projectsTitle}>Projects</h3>
                     <div className={classes.projectsList}>
@@ -60,10 +61,7 @@ const ProjectsSection = (props:ProjectsSectionProps) =>{
                                 // console.log('project:', project);
                                 return(
                                     <BasicCard 
-                                    showPlayOnHover={true}
-                                    identificationId={project.idProject}
                                     key={index}
-                                    onPlayHandler={onPlayProjectCardHandler}
                                     additionalStyle={{width:"220px",height:"auto", minWidth:"220px", 
                                     minHeight:"250px",position:"relative"}}>
                                         <div className={classes.cardImageContainer}>
@@ -71,25 +69,43 @@ const ProjectsSection = (props:ProjectsSectionProps) =>{
                                         </div>
                                         <p className={classes.cardProjectDescription}>{project.description}</p>
                                         <hr />
-                                        <div className={classes.urlSection}>
-                                            <a className={classes.cardUrl}
-                                            target={'_blank'} 
-                                            rel={"noreferrer"} 
-                                            href={project.gitUrl}
-                                            ><FaGithub></FaGithub>Source Code</a>
-                                            <a id='urlId' 
-                                            target={'_blank'} 
-                                            rel={"noreferrer"} 
-                                            className={classes.cardUrl} 
-                                            href={project.url}><FaGlobe></FaGlobe>Service URL</a>
-                                            
+                                        <PlayButton 
+                                        identificationId={project.idProject}
+                                        onClickHandler={onPlayProjectCardHandler}
+                                        containerStyle={{position:"static", top:"-35px", left:"170px", margin:"auto"}} />
+                                        <hr />
+                                        <div className={classes.linkContainer}>
+                                                <FaGithub className={classes.icon} />
+                                                <a className={classes.cardUrl}
+                                                target={'_blank'} 
+                                                rel={"noreferrer"} 
+                                                href={project.gitUrl}>Source Code</a>
                                         </div>
+                                        <hr /> 
+                                        <div className={classes.linkContainer}>
+                                                <FaGlobe className={classes.icon} />
+                                                <a 
+                                                id='urlId' 
+                                                target={'_blank'} 
+                                                rel={"noreferrer"} 
+                                                className={classes.cardUrl} 
+                                                href={project.url}>Service URL</a>
+                                        </div>
+                                            
+                                        
                                         <hr />
                                         <div className={classes.techListContainer}>
                                             {project.techStack.map(
                                                 (techLabel, index) => <MiniCardKey key={index} label={techLabel} />
                                             )}
                                         </div>
+                                        <hr />
+                                        <div className={classes.techListContainer}>
+                                            {project.features.map(
+                                                (featureLabel, index) => <MiniCardKey key={index} label={featureLabel} />
+                                            )}
+                                        </div>
+                                        
                                     </BasicCard>
                                 )
                             }

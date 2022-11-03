@@ -6,3 +6,10 @@
         height: auto  ;
         z-index: 2;
 }
+
+@media screen and (max-width:600px) {
+   .main{
+        margin: 0px 8px 0px 8px;
+        /* border: 2px solid red; */
+   }     
+}

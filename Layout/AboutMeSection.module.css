@@ -40,7 +40,8 @@
 
 @media screen and (max-width:600px) {
     .container{
-        margin: 120px 8px 0px 8px;
+        /* border:2px solid red; */
+        margin: 120px 0px 0px 0px;
     }
     .textContent{
         display: block;

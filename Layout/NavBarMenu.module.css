@@ -43,7 +43,7 @@
 
 .menu a{
     margin: 0px 16px 0px 0px;
-    color: var(--text-on-secondary-color);
+    color: var(--text-on-primary-color);
     font-weight: bold;
 }
 
@@ -63,7 +63,7 @@
         height: 100vh;
         text-align: center;
         background-color: var(--primary-color);
-        color:var(--secondary-color);
+        color:var(--text-on-primary-color);
         position: absolute;
         top: 0;
         right: 0;
@@ -73,7 +73,7 @@
         display: block;
         margin: 16px 8px 16px 8px;
         font-size: 24px;
-        color: var(--secondary-color);
+        color: var(--text-on-primary-color);
     }
 
     .closeSideBarLink{

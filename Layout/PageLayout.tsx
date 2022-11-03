@@ -1,12 +1,9 @@
 // import { NextSeo } from "next-seo";
 import { ReactNode, useState } from "react";
 
-import AppDemo from "../Components/AppDemo";
 import NavBarMenu from "./NavBarMenu";
-import PortalContainer from "./PortalContainer";
 import classes from "./PageLayout.module.css";
 import { motion } from "framer-motion";
-import { useContext } from "react";
 
 type PortalInfo = {
     showPortal:boolean,
@@ -32,7 +29,7 @@ const PageLayout = ({children, title, description}:PageLayoutProps):JSX.Element 
       return(
         
         <motion.main
-            className=""
+            className={classes.main}
             initial="hidden" 
             animate="enter" 
             exit="exit"

@@ -1,0 +1,12 @@
+.container{
+    border-radius: 50%;
+    width: 48px;
+    height: 48px;
+    background-color: #03F16F;
+    opacity: 1;
+    /* border: 2px solid red; */
+}
+
+.triangle{
+    background-color: #2A2A2A;
+}

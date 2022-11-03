@@ -4,7 +4,7 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    margin: 60px 0px 32px 0px;
+    margin: 120px 0px 32px 0px;
 }
 
 .photoContainer{
@@ -52,13 +52,27 @@
     text-align: start;
 }
 .cardUrl{
-    font-size: 12px;
+    font-size: 16px;
     text-decoration: underline;
     color: var(--primary-color);
+    vertical-align: middle;
+}
+.linkContainer{
+    margin: 0px 8px 0px 8px;
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 8px;
+    /* border:2px solid red; */
+    
+}
+.icon{
+    font-size: 48px;
 }
 
 .techListContainer{
-    margin: 0px 8px 0px 8px;
+    margin: 8px 8px 8px 8px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;

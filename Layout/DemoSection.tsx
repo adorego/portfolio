@@ -6,6 +6,7 @@ import { FaGithub } from "react-icons/fa";
 import Image from 'next/image';
 import MiniCardKey from "../Components/MiniCardKey";
 import PageLayout from "./PageLayout";
+import PlayButton from "../Components/PlayButton";
 import PortalContainer from "./PortalContainer";
 import classes from './DemoSection.module.css';
 
@@ -46,10 +47,6 @@ const DemoSection = (props:DemoSectionProps) =>{
                 {appDemoRef.current}
             </PortalContainer>}
             <section className={classes.container}>
-                <div className={classes.photoContainer}>
-                    <Image className={classes.sectionPhoto} src={'/images/projects_image.jpeg'} 
-                    alt={'My photo'} priority={true} layout="responsive" width={2400} height={1800}/>
-                </div>
                 <div className={classes.demosContent}>
                     <h3 className={classes.demosTitle}>Demos</h3>
                     <div className={classes.demosListContainer}>
@@ -57,22 +54,25 @@ const DemoSection = (props:DemoSectionProps) =>{
                             (demo, index) => {
                                 return(
                                     <BasicCard key={index} 
-                                    identificationId={demo.demoId}
-                                    onPlayHandler={onPlayDemoCardHandler}
                                     additionalStyle={{width:"220px",height:"auto", minWidth:"220px", 
                                     minHeight:"250px",position:"relative"}}>
                                         <h5 className={classes.cardTitle}>{demo.title}</h5>
                                         <h6 className={classes.cardDescription}>{demo.description}</h6>
                                         <hr />
-                                        <div className={classes.urlSection}>
+                                        <PlayButton 
+                                        identificationId={demo.demoId}
+                                        onClickHandler={onPlayDemoCardHandler}
+                                        containerStyle={{position:"static", top:"-35px", left:"170px", margin:"auto"}} />
+                                        <hr />
+                                        <div className={classes.linkContainer}>
+                                            <FaGithub className={classes.icon}/>
                                             <a className={classes.cardUrl}
                                             target={'_blank'} 
                                             rel={"noreferrer"} 
                                             href={demo.gitUrl}
-                                            ><FaGithub></FaGithub>Source Code</a>
-                                            
-                                            
-                                        </div>
+                                            >Source Code</a>
+                                        </div> 
+                                        
                                         <hr />
                                         <div className={classes.techListContainer}>
                                             {demo.stack.map(
