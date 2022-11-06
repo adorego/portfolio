@@ -38,7 +38,7 @@ export const ProjectsList:Array<ProjectModel> = [
         name:'Professional Portfolio',
         image:{url:'/images/logo.png', width:'1386', height:'1507'},
         description:'My professional Portfolio .',
-        video:'/videos/loyaltyapp.mp4',
+        video:'/videos/portfolio.mp4',
         url:'https://portfolio-31p0hzya4-adorego.vercel.app/',
         gitUrl:'https://github.com/adorego/portfolio.git',
         techStack:['ReactJS', 'NextJS', 'Motion Framer' ],
