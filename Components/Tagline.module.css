@@ -1,8 +1,11 @@
 .container{
     width: 100%;
-    text-align: center;
+    text-align: justify;
     color: #2A2A2A;
-    max-width: 800px;
+    max-width: 100%;
+    
+    
+    
     
 }
 
@@ -14,29 +17,69 @@
     margin: 0px 0px 0px 0px;
 }
 
-
-@media screen and (max-width:600px){
-    .container{
-        margin: 1rem 8px 1rem 8px;
-    }
-    .container h5{
-        margin: 0px 0px 0px 0px;
-    }
-    .buttonContainer{
-        margin: 32px 0px 32px 0px ;
-    }
+.buttonContainer{
+    margin: auto;
+    text-align: center;
+    background-color:var(--secondary-color);
+    width:160px;
+    height:60px;
+    font-weight:bold;
+    padding: 19px 0px 0px 0px;
+    color:var(--text-on-primary-complement);
+    border-radius: 8px;
 }
 
-@media screen and (min-width:600px){
+.buttonContainer a:hover{
+    color: var(--primary-color);
+}
+
+.buttonLink{
+    cursor: pointer;
+    
+}
+
+.container ul li{
+    
+    font-size: 14px;
+}
+
+.listContainer{
+    margin: 0px 0px 32px 0px;
+}
+@media screen and (max-width:600px){
     .container{
         margin: auto;
     }
     .container h5{
         margin: 0px 0px 0px 0px;
     }
-    .buttonContainer{
-        margin: 32px 0px 32px 0px;
+    .container ul{
+        margin: 32px 0px 0px 0px;
+        text-align: center;
+        width: 90vw;
     }
+    .container li{
+        text-align: center;
+    }
+    
+}
+
+@media screen and (min-width:600px){
+    .container{
+        margin: auto;
+        /* border: 2px solid red; */
+    }
+    .container h5{
+        margin: 0px 0px 0px 0px;
+    }
+    .container ul{
+        margin: 32px 0px 0px 0px;
+        width: 90%;
+    }
+    .container ul li{
+        text-align: center;
+    }
+    
 }
 
 

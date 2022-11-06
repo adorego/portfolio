@@ -9,7 +9,7 @@ export const ProjectsList:Array<ProjectModel> = [
         url:'https://loyaltyapp.com.py/ucom',
         gitUrl:'https://github.com/adorego/loyalty-app-university.git',
         video:'/videos/loyaltyapp.mp4',
-        techStack:['ReactJS', 'NextJS', 'MongoDB', 'reduxjs/toolkit','Next-Auth' ],
+        techStack:['ReactJS', 'NextJS', 'MongoDB', 'reduxjs/toolkit','Next-Auth', 'Javascript', 'HTML5', 'CSS3'],
         features:['React Hooks','SSR', 'Serverless']
     },
     // {
@@ -30,7 +30,7 @@ export const ProjectsList:Array<ProjectModel> = [
         video:'/videos/smart-house.mp4',
         url:'https://smart-house-gold.vercel.app/',
         gitUrl:'https://github.com/adorego/smart-house.git',
-        techStack:['ReactJS', 'NextJS', 'MongoDB' ],
+        techStack:['ReactJS', 'NextJS', 'MongoDB', 'Javascript', 'HTML5', 'CSS3'],
         features:['React Hooks']
     },
     {

@@ -3,7 +3,6 @@ import PageLayout from './PageLayout';
 import classes from './AboutMeSection.module.css';
 const AboutMeSection = () =>{
     return(
-        <PageLayout title='About Me' description='My career history '>
             <section className={classes.container}>
                 <div className={classes.photoContainer}>
                     <Image src={'/images/foto_whatsapp.jpeg'} 
@@ -34,7 +33,7 @@ const AboutMeSection = () =>{
                 </div>
                 
             </section>
-        </PageLayout>
+       
     )
 }
 

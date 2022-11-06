@@ -12,13 +12,12 @@ type PortalInfo = {
 
 export interface PageLayoutProps{
     children:ReactNode;
-    title:string;
-    description:string;
+    
     
 
     
 }
-const PageLayout = ({children, title, description}:PageLayoutProps):JSX.Element =>{
+const PageLayout = ({children}:PageLayoutProps):JSX.Element =>{
     
       const variants = {
         enter:{opacity:1, x:0, y:0},

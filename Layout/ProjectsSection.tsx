@@ -34,7 +34,6 @@ const ProjectsSection = (props:ProjectsSectionProps) =>{
         setShowPortal(false);
     }
     const onPlayProjectCardHandler = (projectId:string) =>{
-        console.log('projectId:', projectId);
         const project = props.projects.filter((item) => item.idProject === projectId)
         appDemoRef.current = <AppDemo 
         videoToShow={project[0].video}
@@ -43,15 +42,7 @@ const ProjectsSection = (props:ProjectsSectionProps) =>{
 
     }
     return(
-        <PageLayout title='Projects' description='My commercial project list '>
-            {showPortal && <PortalContainer>
-                {appDemoRef.current}
-            </PortalContainer>}
             <section className={classes.container}>
-                {/* <div className={classes.photoContainer}>
-                    <Image className={classes.sectionPhoto} src={'/images/projects_image.jpeg'} 
-                    alt={'My photo'} priority={true} layout="responsive" width={2400} height={1800}/>
-                </div> */}
                 <div className={classes.projectsContent}>
                     <h3 className={classes.projectsTitle}>Projects</h3>
                     <div className={classes.projectsList}>
@@ -117,9 +108,12 @@ const ProjectsSection = (props:ProjectsSectionProps) =>{
                         )}
                     </div>
                 </div>
+                {showPortal && <PortalContainer>
+                {appDemoRef.current}
+                </PortalContainer>}
             </section>
             
-        </PageLayout>
+       
         
     )
 }

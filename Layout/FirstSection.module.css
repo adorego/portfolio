@@ -9,6 +9,7 @@
     flex-direction: column;
     background-color: #FBFCF8;
     position: relative;
+    padding: 0px 0px 32px 0px;
     /* animation-name: initialAnimation;
     animation-duration: 6s; */
     
@@ -28,8 +29,21 @@
     
 }
 
+.resumeLink{
+    background-color:var(--primary-color);
+    border:1px solid var(--primary-color);
+    color:var(--text-on-primary-color);
+    width:8rem; 
+    height:41px;
+    border-radius: 8px;
+    text-align: center;
+    padding: 8px 0px 0px 0px;
+}
 
-
+.resumeLink:hover{
+    color: var(--secondary-color);
+    scale: 1.2;
+}
 
 
 .tagline{
@@ -47,7 +61,9 @@
 @media screen and (max-width:600px) {
 
     .section{
-        padding: 1rem;
+        border: 2px solid red;
+        text-align: center;
+        padding: 8px 8px 8px 8px;
     }
     .button{
         width: 100%;

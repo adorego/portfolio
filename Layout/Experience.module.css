@@ -1,0 +1,33 @@
+.container{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    /* border:2px solid red; */
+    margin: 120px 0px 32px 0px;
+}
+
+.experienceTitle{
+    width: 80vw;
+    /* border: 2px solid red; */
+    margin: 0px 0px 32px 0px;
+    text-align: start;
+}
+
+@media screen and (max-width:422px) {
+    .container{
+        margin: 120px 0px 0px 0px;
+    }
+}
+
+@media screen and (min-width:422px) and (max-width:600px) {
+    .container{
+        margin: 120px 16px 0px 16px;
+    }
+}
+
+@media screen and (min-width:600px) {
+    .container{
+        margin: 120px 32px 0px 32px;
+    }
+}

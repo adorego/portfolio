@@ -24,11 +24,10 @@ a {
   --primary-color-dark:#001D36;
   --primary-color-complement:#82120D;
   --primary-color-complement-dark:#362100;
-  /* --secondary-color: #B54912; */
-  /* --secondary-color:#07088F; */
-  --secondary-color:#82120D;
+  --secondary-color:#CF6129;
   --secondary-color-complement: #507085;
   --background-color: #F4F2F3;
+  --text-on-background-color:#2A2A2A;
   --text-color-primary: #2A2A2A;
   --text-on-primary-color:#F4F2F3;
   --text-on-secondary-color:#F4F2F3;

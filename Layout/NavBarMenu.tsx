@@ -4,7 +4,6 @@ import {FaBars} from "react-icons/fa";
 import Head from "next/head";
 import Image from 'next/image';
 import Link from "next/link";
-import SideNavigation from "../Components/SideNavigation";
 import classes from './NavBarMenu.module.css';
 import logo from '../public/images/logo.png';
 
@@ -17,15 +16,16 @@ export const navLinks:Array<NavLinkModel> = [{label:'Home', url:'/'},
     {label:'About Me',url:'/about'},
     {label:'Projects',url:"/projects"}, 
     {label:'Demos',url:'/demos'}, 
-    {label:'Coding Patterns', url:"/coding_patterns"}, 
-    {label:'Blog', url:"/blog"},
+    {label:'Experience', url:"/experience"}, 
     {label:'Education', url:"/education"}, 
+    // {label:'Blog', url:"/blog"},
     {label:'Contact', url:"/contact"}];
 const NavBarMenu = () =>{
     const [display, setDisplay] = useState('') ;
     const [showSideBar, setShowSideBar] = useState(false);
-    const [currentPage, setCurrentPage] = useState<number>(0);
+    const [currentPage, setCurrentPage] = useState<number>();
 
+    
     useEffect(
         () => {
             // console.log('Running useEffect');
@@ -50,11 +50,12 @@ const NavBarMenu = () =>{
         setShowSideBar(false);
     }
 
-    const onPageChangeHandler = (selectedPage:number) =>{
-        setCurrentPage(selectedPage);
+    
+    const onNavigateHandler = (index:number) =>{
+        setCurrentPage(index);
+        setShowSideBar(false);
     }
     
-    // console.log("display:", display);
     return(
         <>
         <Head>
@@ -95,7 +96,7 @@ const NavBarMenu = () =>{
                         (link:NavLinkModel, index) =>{
                             return(
                                 <Link key={link.label} href={link.url}>
-                                    <a className={index === currentPage ? classes.stateColor : ""}>{link.label}</a>
+                                    <a onClick={() => onNavigateHandler(index)} className={index === currentPage ? classes.stateColor : ""}>{link.label}</a>
                                 </Link>
                             )
                         }
@@ -104,9 +105,7 @@ const NavBarMenu = () =>{
                     
                 </div>}
             </div>
-            <div className={classes.sideNavigationButtons}>
-                <SideNavigation onNavigationChange={onPageChangeHandler} />
-            </div>
+            
             
         </div>
         </>

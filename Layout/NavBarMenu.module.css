@@ -48,7 +48,7 @@
 }
 
 .menu a:hover{
-    color: var(--secondary-color-complement);
+    color: var(--primary-color);
     cursor: pointer;
 }
 

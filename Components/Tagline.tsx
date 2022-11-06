@@ -32,22 +32,28 @@ const Tagline = () =>{
                 I am a Software Engineer specialized in Web Development 
                 with ReactJS and NextJS with Typescript.
             </motion.h6>
+            <motion.div
+            className={classes.listContainer}
+            initial="hidden" 
+            animate="visible" 
+            variants={variants}
+            transition={{duration:4, delay:2}}>
+                <ul>
+                <li>15+ years of commercial experience in Software Engineering</li>
+                <li>2+ years of commercial experience with React and NextJS</li>
+                </ul>
+            </motion.div>
             <motion.div 
             initial="hidden" 
             animate="visible" 
             variants={variants} 
             transition={{duration:4, delay:2}}
             className={classes.buttonContainer}>
-                <Button label="Contact Me"
-                    animated={false}
-                    isAvailable={true}
-                    additionalStyle={{backgroundColor:"var(--primary-color-complement)", 
-                    width:"160px", height:"60px", 
-                    border:"2px solid var(--primary-color)",
-                    fontWeight:"bold",
-                    margin:"0px 0px 0px 0px", color:"var(--text-on-primary-complement)"}}>
-
-                </Button>
+                <a className={classes.buttonLink} 
+                   rel="noreferrer" target='_blank' 
+                   href={'https://wa.me/+595981365300'} >
+                 Contact Me
+                </a>
             </motion.div>
         </div>
         

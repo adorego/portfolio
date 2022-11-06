@@ -42,10 +42,6 @@ const DemoSection = (props:DemoSectionProps) =>{
 
     }
     return(
-        <PageLayout title='Demos' description='My Demos List '>
-            {showPortal && <PortalContainer>
-                {appDemoRef.current}
-            </PortalContainer>}
             <section className={classes.container}>
                 <div className={classes.demosContent}>
                     <h3 className={classes.demosTitle}>Demos</h3>
@@ -92,8 +88,11 @@ const DemoSection = (props:DemoSectionProps) =>{
                         )}
                     </div>
                 </div>
+                {showPortal && <PortalContainer>
+                    {appDemoRef.current}
+                </PortalContainer>}
             </section>
-        </PageLayout>
+        
     )
 }
 
