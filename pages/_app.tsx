@@ -7,14 +7,14 @@ import Script from 'next/script';
 function MyApp({ Component, pageProps }: AppProps) {
   return (
     <>
-    <Script strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=G-Q9WZS8QJW0`} />
+    <Script strategy="lazyOnload" src={`https://www.googletagmanager.com/gtag/js?id=G-H3LZN2RMY7`} />
 
     <Script id={'1'} strategy="lazyOnload">
                 {`
                     window.dataLayer = window.dataLayer || [];
                     function gtag(){dataLayer.push(arguments);}
                     gtag('js', new Date());
-                    gtag('config', 'G-Q9WZS8QJW0', {
+                    gtag('config', 'G-H3LZN2RMY7', {
                     page_path: window.location.pathname,
                     });
                 `}
