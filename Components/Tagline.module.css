@@ -49,9 +49,18 @@
 @media screen and (max-width:600px){
     .container{
         margin: auto;
+        max-width: 98vw;
+    }
+
+    .container h1{
+        text-align: center;
+        font-size: 26px;
     }
     .container h5{
-        margin: 0px 0px 0px 0px;
+        margin: 0px 8px 0px 8px;
+    }
+    .container h6{
+        margin: 0px 8px 0px 8px;
     }
     .container ul{
         margin: 32px 0px 0px 0px;

@@ -45,9 +45,16 @@
     }
     .textContent{
         display: block;
-        width: 95%;
+        width: 90%;
+        
         
     }
+    .title{
+        /* border: 2px solid red; */
+        padding: 0px 0px 0px 24px;
+        width: 80vw;
+    }
+    
     
 }
 
@@ -57,7 +64,7 @@
     }
     .textContent{
         display: block;
-        width: 95%;
+        width: 80%;
         
     }
 
