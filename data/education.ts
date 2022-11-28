@@ -55,6 +55,14 @@ export const EducationData:Array<EducationModel> = [
         tag:"web specialization",
         data:[
             {
+                title:"React-The Complete Guide",
+                description:'This is a 50 hours specialization course, the number one ReactJS certification',
+                university:"Udemy",
+                country:"USA",
+                degree:"Developer Certificate",
+                image:"/images/education/React-The_Complete_Guide.jpg"
+            },
+            {
                 title:"Responsive Web Design",
                 description:'This is a 300 hours specialization course',
                 university:"freeCodeCamp",
